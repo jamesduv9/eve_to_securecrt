@@ -84,7 +84,7 @@ def create_templates(output_directory: str, eve_username: str, eve_password: str
 
     for device_values in response.json().get("data").values():
         ip, port = device_values.get("url").split("telnet://")[1].split(":")
-        hex_port = to_padded_hex(port)
+        hex_port = to_padded_hex(int(port))
         device_name = device_values.get("name")
         templated_session = securecrt_template.render(
             ip=ip,
