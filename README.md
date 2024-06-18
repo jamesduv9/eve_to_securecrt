@@ -43,7 +43,7 @@ Options:
 
 Run the script with required params
 ```bash
-python eve_to_securecrt.py create_templates --eve-ip 192.168.1.120 --eve-username admin --eve-password eve --lab-name mylab123
+python eve_to_securecrt.py create-templates --eve-ip 192.168.1.120 --eve-username admin --eve-password eve --lab-name mylab123
 ```
 
 ## Template
