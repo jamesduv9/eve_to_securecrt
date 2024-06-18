@@ -18,7 +18,7 @@ headers: dict[str, str] = {"accept": "application/json"}
 cookies: dict[str, str] = {'html5': '-1'}
 
 
-def to_padded_hex(number) -> str:
+def to_padded_hex(number: int) -> str:
     """
     Converts the actual ports to the format that securecrt wants in the template
     """
@@ -64,7 +64,7 @@ def menu():
 @click.option("--eve-username", required=True, help="Username for your eve-ng instance- Ex. admin", type=click.STRING)
 @click.option("--eve-password", required=True, help="Password for your eve-ng instance- Ex. eve", type=click.STRING)
 @click.option("--lab-name", required=True, help="Lab name that you want sessions for- Ex. mylab", type=click.STRING)
-def create_templates(output_directory: str, eve_username: str, eve_password: str, eve_ip: str, lab_name: str): #pylint: disable=R0914
+def create_templates(output_directory: str, eve_username: str, eve_password: str, eve_ip: str, lab_name: str) -> None: #pylint: disable=R0914
     """
     Makes an api call to eve-ng getting all nodes in a lab
 
